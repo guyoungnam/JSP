@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emp.EmpMapper">
+
+	<select id="selectAll" parameterType="EmpDTO">
+		select empno,ename,sal,to_char(hiredate,'yyyy/MM/dd') hiredate, deptno
+		from emp
+		order by 1;
+
+	</select>
+
+
+	
+
+</mapper>

@@ -1,0 +1,16 @@
+
+create table board
+( num NUMBER(4) primary key,
+title VARCHAR2(200) not null,
+author VARCHAR2(20) not null,
+content VARCHAR(4000) not null,
+writeday DATE default SYSDATE,
+readCnt NUMBER(4) default 0);
+
+drop sequence board_seq;
+create sequence board_seq;
+
+insert into board(num, title, author,content)
+values(board_seq.netval, '테스트', '홍길동', '테스트입니다');
+commit;
+

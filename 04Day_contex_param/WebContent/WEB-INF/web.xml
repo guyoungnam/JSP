@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>04Day_init_param</display-name>
+ 
+ <context-param>
+ <param-name>userid</param-name>
+ <param-value>aaa</param-value>
+ </context-param>
+ 
+ <context-param>
+ <param-name>email</param-name>
+ <param-value>aaa@naver.com</param-value>
+ </context-param>
+ 
+  <servlet>
+    <servlet-name>ContextParamServelt</servlet-name>
+    <servlet-class>com.controller.ContextParamServelt</servlet-class>
+   
+  </servlet>
+  <servlet>
+    <servlet-name>OtherServlet</servlet-name>
+    <servlet-class>com.controller.OtherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OtherServlet</servlet-name>
+    <url-pattern>/yyy</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ContextParamServelt</servlet-name>
+    <url-pattern>/xxx</url-pattern>
+  </servlet-mapping>
+</web-app>
